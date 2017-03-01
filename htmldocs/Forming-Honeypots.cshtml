@@ -1,0 +1,86 @@
+﻿
+<article>
+    <header class="entry-header">
+        <h1 class="entry-title">Fo(a)rming Honeypots</h1>
+        <div class="entry-meta">
+            <span class="post-category"><a href="javascript:;">Uncategorized</a></span>
+
+            <span class="post-date"><a href="javascript:;"><time class="entry-date" datetime="2016-08-16 12:00">August 16, 2016</time></a></span>
+            <span class="comments-link"><a id="comments" href="#disqus_thread">0 Comments</a></span>
+            <span class="disqus-comment-count" data-disqus-url="/Archive/Forming-Honeypots#disqus_thread"> <!-- Count will be inserted here --> </span>
+        </div>
+    </header>
+    <div class="row clearfix">
+        <div class="col-lg-12">
+            <p>When Internet gained traction in 1990, one thing made it super popular in commercial world. Forms!</p>
+            <p>Yes forms was and still are integral part of web. But there is one problem, SPAMMERS</p>
+            <br>
+            <p>Its really easy to fake form post, by scrpaing the HTML and recreate form post to spam. This spam can be used to create bruteforce attack on login /passwortd, ruin some politician's campaign database and even turn your squeeze page traffic into garbage. </p>
+            <p>But have no fear, internet already have solutions like Captcha, or enhanced Captcha with images.</p>
+            <p>There's the problem with that :-</p>
+            <ol type="i">
+                <li>People hate guesing twisty words on Captcha</li>
+                <li>Sometimes audio captchas are too fast to listen. Image captcha are too fast to listen. Image captcha are too hard to comprehend words/ letters/ sematics in it</li>
+                <li>They are really annoying, I mean why would you enter captcha on Squeeze page so owner of website sends monthly spam on your email.</li>
+            </ol>
+            <br>
+            <!--breakhere-->
+            <p>I am not saying they are bad , but there's time and place to use those.</p><p>Say you are google, people tend to spam your account registration so it makes sense to have some kind of verfication of human (like captcha or IMR/IVR confirmation)</p>
+            <p>But what if you are startup or some new politician like Jill Stein, who just want to get work done and make it super easy for theirs leads on website who may become their potential customers/followers ??</p>
+            <p>You should expect user to solve captcha for you. This will hamper user interaction, sometimes user would just get fed up and he would leave the site.</p>
+            <p>By quick reaserch I found there is one way to make it easy for users and still have spam blocking in place. </p>
+            <h6><a href="https://en.wikipedia.org/wiki/Honeypot_(computing)" target="_blank">HONEYPOTS !</a></h6>
+
+            <p>What are honeypots? They are exactly what name suggest , attraction for potential criminal so he gets lured and raise alarms so we know of its existence. </p>
+
+            <p>
+                Although concept first introduced in <a href="https://www.sans.org/security-resources/idfaq/what-is-a-honeypot/1/9" target="_blank">2000</a>, people are just finding the use of it.
+            </p>
+
+            <p>Here's how it works for HTML Forms. You place some fields which are hidden to user VIA styling. Your code knows what field it is and what's its value supposed to be. (usually blank)</p><p>Spamming Robots will usually try to fill up all fields before submitting form. </p>
+
+            <p>This way in the backend you can recognize the activity of Spamming Bots and you can take neccessary precautions to stop the attack.</p>
+
+
+            <p>But you can't assume that this technology is hidden from Spammers. They are step ahead of us, they write a system which can by pass this security measure. </p>
+
+            <p>Solution:</p>
+            <ol type="i">
+                <li>Keep stregntheing your system by adding different kinds and combinations of honeypots. Like you can have one honeypots which supposed to blank on submission of form. And another honeypot supposed have hashed value of Date in Hawaii and number of day on <a href="https://mathsstarters.net/numoftheday" target="_blank">this website</a></li>
+                <li>Use complex minified javascript to modify the value on Form Submission. Write a function which does the magic with such variables (Gods/Demons/babies/girls) that would make Spammer harder to analyze your JavaScript code. Refer to <a href="https://www.se.rit.edu/~tabeec/RIT_441/Resources_files/How%20To%20Write%20Unmaintainable%20Code.pdf" target="_blank">this paper</a> (don't follow it for normal programming though. Its bad. )  </li>
+                <li>After detection of Spam , don't just let Bot get of the hook. Block IP address , get location so you can prevent attacks in future.</li>
+            </ol>
+
+            <p> I tried to develop such system in C#. Here's the <a href="https://github.com/rahulkhadse/BotDetector" target="_blank"> link to sourcecode</a>. I have created honeypots in both C# ASP.NET Webforms and MVC.</p>
+            <p>Stay Spam free !! Cheers !</p>
+            <p>-Rahul Khadse</p>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                 */
+                var disqus_config = function () {
+
+                    this.page.identifier = '2'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    this.page.title = 'Forming-Honeypots';
+                };
+                (function () {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+
+                    s.src = '//blograhulkhadsecom.disqus.com/embed.js';
+
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+</article>

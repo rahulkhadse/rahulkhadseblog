@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Blog by Rahul Khadse";
+    ViewBag.ActiveButton = "Archive";
+}
+@model string
+
+
+
+@{ 
+    Html.RenderPartial("~/htmldocs/"+Model+".cshtml"); 
+    
+ }
